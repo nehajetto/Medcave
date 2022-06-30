@@ -8,14 +8,14 @@ const Page6=()=>
 {
     
     return(
-     <View style={{flexDirection:'row'}}>
+     <View >
       <StatusBar backgroundColor={'#eee'} barstyle="dark-content"/>
-      <View style={{flex:1,padding:2}}>
-      <Text style={{textAlign:'center',fontSize:30,color:'black',fontWeight:'bold'}} >
+      <View style={styles.card}>
+      <Text  style={styles.txt1}>
                
-               {'\n'} Dr.Jaya Mohan(ENT)
+                Dr.Jaya Mohan(ENT)
         </Text>
-        <Text>
+        <Text style={styles.txt2}>
             {'\n'}
             {'\t'}Available timing :9:00 AM - 12:30 PM {'\n'}
           {'\t'}Available Days   :Monday - Friday
@@ -43,7 +43,26 @@ const styles=StyleSheet.create({
         borderRadius:20,
         marginTop:50
 
-    }    
+    } ,txt1:{
+        textAlign:'center',fontSize:20,color:'black',fontWeight:'bold'
+    }
+    ,txt2:{
+        textAlign:'center',fontSize:13,color:'black',
+    },
+    card:{
+    
+        margin:30,
+        borderRadius:15,
+        paddingVertical:30,
+        alignContent:'center',
+        backgroundColor:'#fff',
+        shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,  
+    elevation: 5
+
+    }
     
 
 })
