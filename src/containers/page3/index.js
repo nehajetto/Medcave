@@ -1,29 +1,38 @@
-import {View,Text,TouchableOpacity,StyleSheet,Dimensions} from 'react-native';
+import {View,Text,TouchableOpacity,StyleSheet,Dimensions, StatusBar} from 'react-native';
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
+
 
 const{width,height}=Dimensions.get('window');
 
 const Page3=()=>
 {
+  const navigation=useNavigation();
   return(
       <View style={styles.container}>
+          <StatusBar backgroundColor={'#eee'}  barStyle="dark-content"/>
 
+          
+            <Text style={styles.dept}>
+              DEPARTMENTS
+            </Text>
+          
 
-          <TouchableOpacity style={styles.bluebn}>
+          <TouchableOpacity style={styles.bluebn} onPress={()=>navigation.navigate('Page6')}>
             <Text style ={styles.mainTxt}>
-                DOCTORS
+                ENT SPECIALIST
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.bluebn}>
+          <TouchableOpacity style={styles.bluebn}  >
             <Text style ={styles.mainTxt}>
-                LAB FACILITY
+                DERMATOLOGIST
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.bluebn}>
+          <TouchableOpacity style={styles.bluebn} onPress={()=>navigation.navigate('Page7')}>
             <Text style ={styles.mainTxt}>
-                PALLIATIVE CARE
+                GENERAL MEDICINE
             </Text>
           </TouchableOpacity>
  
@@ -54,7 +63,13 @@ const styles=StyleSheet.create({
     },
     mainTxt:{
         textAlign:'center'
+    },
+    dept:{
+      textAlign:'center',
+      fontWeight:'bold',
+      fontSize:30
     }
+    
 
 })
 export default Page3;

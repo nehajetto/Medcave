@@ -1,34 +1,36 @@
 import {View,Text,TouchableOpacity,StyleSheet,Dimensions, StatusBar} from 'react-native';
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 const{width,height}=Dimensions.get('window');
 
-const Page4=()=>
+const Page5=()=>
 {
+    const navigation=useNavigation();
   return(
       <View style={styles.container}>
           <StatusBar backgroundColor={'#eee'}  barStyle="dark-content"/>
 
             <View style={{flexDirection:'row'}}>
                 <View style={{flex:0.5,padding:2}}>
-                    <TouchableOpacity style={{backgroundColor:'red',height:120}}>
+                    <TouchableOpacity style={{backgroundColor:'red',paddingVertical:110} } onPress={()=>navigation.navigate('Page3')}>
                     <Text style={{textAlign:'center',color:'#fff',fontWeight:'bold'}}>DOCTORS  </Text>
                     </TouchableOpacity>
                 </View>
                 <View style={{flex:0.5,padding:2}}>
-                    <TouchableOpacity style={{backgroundColor:'green',height:120}}>
+                    <TouchableOpacity style={{backgroundColor:'green',paddingVertical:110}}>
                         <Text style={{textAlign:'center',color:'#fff',fontWeight:'bold'}}>LAB FACILITIES</Text>
                     </TouchableOpacity>
                 </View>
             </View>
             <View style={{flexDirection:'row'}}>
                 <View style={{flex:0.5,padding:2}}>
-                    <TouchableOpacity style={{backgroundColor:'#fc0',height:120}}>
+                    <TouchableOpacity style={{backgroundColor:'#fc0',paddingVertical:110}}>
                     <Text style={{textAlign:'center',color:'#fff',fontWeight:'bold'}}>PALLIATIVE CARE</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={{flex:0.5,padding:2}}>
-                    <TouchableOpacity style={{backgroundColor:'orange',height:120}}>
+                    <TouchableOpacity style={{backgroundColor:'orange',paddingVertical:100}}>
                         <Text style={{textAlign:'center',color:'#fff',fontWeight:'bold'}}>VACCINATION FACILITY</Text>
                     </TouchableOpacity>
                 </View>
@@ -39,7 +41,7 @@ const Page4=()=>
 
           <TouchableOpacity style={styles.bluebn}>
             <Text style ={styles.mainTxt}>
-                SELECT DATE
+                 DATE
             </Text>
           </TouchableOpacity>
  
@@ -55,7 +57,7 @@ const styles=StyleSheet.create({
          padding:40,  
     },
     new:{
-        padding:40
+        height:40
     },
     bluebn:{
         padding:25,
@@ -75,4 +77,4 @@ const styles=StyleSheet.create({
     }
 
 })
-export default Page4;
+export default Page5;
