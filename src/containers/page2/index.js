@@ -25,12 +25,12 @@ const Page2=()=>
             </View>
             <View style={{flexDirection:'row'}}>
                 <View style={{flex:0.5,padding:2}}>
-                    <TouchableOpacity style={{backgroundColor:'#fc0',paddingVertical:110}}>
+                    <TouchableOpacity style={{backgroundColor:'#fc0',paddingVertical:110}} onPress={()=>navigation.navigate('Page9')}>
                     <Text style={{textAlign:'center',color:'#fff',fontWeight:'bold'}}>PALLIATIVE CARE</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={{flex:0.5,padding:2}}>
-                    <TouchableOpacity style={{backgroundColor:'orange',paddingVertical:100}}>
+                    <TouchableOpacity style={{backgroundColor:'orange',paddingVertical:100}} onPress={()=>navigation.navigate('Page10')}>
                         <Text style={{textAlign:'center',color:'#fff',fontWeight:'bold'}}>VACCINATION FACILITY</Text>
                     </TouchableOpacity>
                 </View>

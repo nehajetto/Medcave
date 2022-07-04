@@ -1,6 +1,7 @@
-import {View,Text,TouchableOpacity,StyleSheet,Dimensions,StatusBar} from 'react-native';
+import {View,Text,TouchableOpacity,StyleSheet,Dimensions,StatusBar,Image} from 'react-native';
 import React from 'react';
-
+import DoctorImage from '../../assets/doctor1.png';
+import DoctorImage1 from '../../assets/doctor2.jpg';
 
 const{width,height}=Dimensions.get('window')
 
@@ -11,16 +12,30 @@ const Page6=()=>
      <View >
       <StatusBar backgroundColor={'#eee'} barstyle="dark-content"/>
       <View style={styles.card}>
+        <Image source={DoctorImage} style={styles.image}/>
       <Text  style={styles.txt1}>
                
-                Dr.Jaya Mohan(ENT)
+                Dr.Antony Jose(ENT)
         </Text>
         <Text style={styles.txt2}>
             {'\n'}
-            {'\t'}Available timing :9:00 AM - 12:30 PM {'\n'}
-          {'\t'}Available Days   :Monday - Friday
+            {'\t  \t \t \t \t \t'}Available timing :9:00 AM - 12:30 PM {'\n'}
+            {'\t  \t \t \t \t \t'}Available Days   :Monday - Friday {'\n'}
         </Text>
-      </View>
+       </View>
+      <View style={styles.card}>
+       <Image source={DoctorImage1} style={styles.image}/>
+      <Text  style={styles.txt1}>
+               
+                Dr.Roy Thelekatt(ENT)
+        </Text>
+        <Text style={styles.txt2}>
+            {'\n'}
+          {'\t \t \t \t \t \t'}Available timing :12:30 PM - 5:00 PM {'\n'}
+          {'\t \t \t \t \t \t'}Available Days   :Monday - Friday {'\n'}
+        </Text>
+
+       </View>
       
      </View>
 
@@ -47,13 +62,13 @@ const styles=StyleSheet.create({
         textAlign:'center',fontSize:20,color:'black',fontWeight:'bold'
     }
     ,txt2:{
-        textAlign:'center',fontSize:13,color:'black',
+        fontSize:13,color:'black'
     },
     card:{
     
-        margin:30,
+        margin:20,
         borderRadius:15,
-        paddingVertical:30,
+        paddingVertical:10,
         alignContent:'center',
         backgroundColor:'#fff',
         shadowColor: '#000',
@@ -62,7 +77,8 @@ const styles=StyleSheet.create({
     shadowRadius: 2,  
     elevation: 5
 
-    }
+    },
+    image:{width:200,height:200,alignSelf:'center',marginVertical:20}
     
 
 })

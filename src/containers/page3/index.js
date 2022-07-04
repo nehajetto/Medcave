@@ -1,5 +1,6 @@
-import {View,Text,TouchableOpacity,StyleSheet,Dimensions, StatusBar} from 'react-native';
+import {View,Text,TouchableOpacity,StyleSheet,Dimensions, StatusBar,Image} from 'react-native';
 import React from 'react';
+
 import { useNavigation } from '@react-navigation/native';
 
 
@@ -8,10 +9,11 @@ const{width,height}=Dimensions.get('window');
 const Page3=()=>
 {
   const navigation=useNavigation();
+  
   return(
       <View style={styles.container}>
           <StatusBar backgroundColor={'#eee'}  barStyle="dark-content"/>
-
+          
           
             <Text style={styles.dept}>
               DEPARTMENTS
@@ -24,21 +26,19 @@ const Page3=()=>
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.bluebn}  >
+          <TouchableOpacity style={styles.bluebn} onPress={()=>navigation.navigate('Page7')} >
             <Text style ={styles.mainTxt}>
                 DERMATOLOGIST
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.bluebn} onPress={()=>navigation.navigate('Page7')}>
+          <TouchableOpacity style={styles.bluebn} onPress={()=>navigation.navigate('Page8')}>
             <Text style ={styles.mainTxt}>
                 GENERAL MEDICINE
             </Text>
           </TouchableOpacity>
  
-          
       
-
       </View>
   )
 
@@ -69,6 +69,7 @@ const styles=StyleSheet.create({
       fontWeight:'bold',
       fontSize:30
     }
+    
     
 
 })
