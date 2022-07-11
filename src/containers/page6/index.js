@@ -1,44 +1,36 @@
-import {View,Text,TouchableOpacity,StyleSheet,Dimensions,StatusBar,Image} from 'react-native';
-import React from 'react';
-import DoctorImage from '../../assets/doctor1.png';
-import DoctorImage1 from '../../assets/doctor2.jpg';
+import {View,Text,TouchableOpacity,StyleSheet,Dimensions,StatusBar,Image, ScrollView} from 'react-native';
+import React, { useEffect, useState } from 'react';
+
+import DoctorCard from '../../components/DoctorCard';
+import { firebase } from '@react-native-firebase/app';
 
 const{width,height}=Dimensions.get('window')
 
 const Page6=()=>
 {
+    const [doctors,setDoctors]=useState([]);
     
+    useEffect(()=>
+    {
+        fetchData();
+    },[])
+
+    const fetchData=async()=>
+    {
+        try{
+    
+        
+    }catch(err){alert}
+    }
+
     return(
      <View >
       <StatusBar backgroundColor={'#eee'} barstyle="dark-content"/>
-      <View style={styles.card}>
-        <Image source={DoctorImage} style={styles.image}/>
-      <Text  style={styles.txt1}>
-               
-                Dr.Antony Jose(ENT)
-        </Text>
-        <Text style={styles.txt2}>
-            {'\n'}
-            {'\t  \t \t \t \t \t'}Available timing :9:00 AM - 12:30 PM {'\n'}
-            {'\t  \t \t \t \t \t'}Available Days   :Monday - Friday {'\n'}
-        </Text>
-       </View>
-      <View style={styles.card}>
-       <Image source={DoctorImage1} style={styles.image}/>
-      <Text  style={styles.txt1}>
-               
-                Dr.Roy Thelekatt(ENT)
-        </Text>
-        <Text style={styles.txt2}>
-            {'\n'}
-          {'\t \t \t \t \t \t'}Available timing :12:30 PM - 5:00 PM {'\n'}
-          {'\t \t \t \t \t \t'}Available Days   :Monday - Friday {'\n'}
-        </Text>
-
-       </View>
-      
+        <ScrollView>
+        <DoctorCard />
+        </ScrollView> 
      </View>
-
+  
     )
 }
 const styles=StyleSheet.create({
