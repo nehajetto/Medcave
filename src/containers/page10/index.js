@@ -9,9 +9,10 @@ const Page10=()=>
 {
     
     return(
-        
-      <View style={styles.card}>
+       <View> 
         <StatusBar backgroundColor={'#eee'} barstyle="dark-content"/>
+      <View style={styles.card}>
+        
        
             <Text style={styles.txt2}>
             {'\n'}
@@ -20,7 +21,44 @@ const Page10=()=>
         </Text>
         
     </View>
+
+    <View style={styles.card}>
+        
        
+            <Text style={styles.txt2}>
+            {'\n'}
+            
+            COVID VACCINATION
+            {'\n'}
+        </Text>
+        
+    </View>
+
+    <View style={styles.card}>
+        
+       
+            <Text style={styles.txt2}>
+            {'\n'}
+            DPT VACCINATION
+            {'\n'}
+        </Text>
+        
+    </View>
+
+    <View style={styles.card}>
+        
+       
+            <Text style={styles.txt2}>
+            {'\n'}
+            HEPATITIS B VACCINATION
+            {'\n'}
+        </Text>
+        
+    </View>
+       
+
+
+    </View>
       
      
       
@@ -34,7 +72,7 @@ const styles=StyleSheet.create({
         textAlign:'center',fontSize:20,color:'black',fontWeight:'bold'
      },
      txt2:{
-        fontSize:13,color:'black',fontWeight:'bold',textAlign:'center'
+        fontSize:13,fontWeight:'bold',textAlign:'center'
      },
      image:{
         width:200,height:200,alignSelf:'center',marginVertical:20},

@@ -15,7 +15,7 @@ const Page7=()=>
         <Image source={DoctorImage2} style={styles.image}/>
       <Text  style={styles.txt1}>
                
-                Dr.Jaya Mohan(ENT)
+                Dr.Jaya Mohan
         </Text>
         <Text style={styles.txt2}>
             {'\n'}

@@ -20,7 +20,7 @@ const Page3=()=>
             </Text>
           
 
-          <TouchableOpacity style={styles.bluebn} onPress={()=>navigation.navigate('Page6')}>
+          <TouchableOpacity style={styles.bluebn} onPress={()=>navigation.navigate('Page5')}>
             <Text style ={styles.mainTxt}>
                 ENT SPECIALIST
             </Text>

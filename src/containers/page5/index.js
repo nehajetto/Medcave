@@ -1,63 +1,50 @@
-import {View,Text,TouchableOpacity,StyleSheet,Dimensions, StatusBar} from 'react-native';
+import {View,Text,TouchableOpacity,StyleSheet,Dimensions,StatusBar,Image} from 'react-native';
 import React from 'react';
-import { useNavigation } from '@react-navigation/native';
+import GDoctorImage1 from '../../assets/doctor1a.jpg';
+import GDoctorImage2 from '../../assets/doctor2b.jpg';
 
-const{width,height}=Dimensions.get('window');
+const{width,height}=Dimensions.get('window')
 
 const Page5=()=>
 {
-    const navigation=useNavigation();
-  return(
-      <View style={styles.container}>
-          <StatusBar backgroundColor={'#eee'}  barStyle="dark-content"/>
+    
+    return(
+     <View >
+      <StatusBar backgroundColor={'#eee'} barstyle="dark-content"/>
+      <View style={styles.card}>
+        <Image source={GDoctorImage1} style={styles.image}/>
+      <Text  style={styles.txt1}>
+               
+                Dr.Dhanya S P
+        </Text>
+        <Text style={styles.txt2}>
+            {'\n'}
+            {'\t  \t \t \t \t \t'}Available timing :9:00 AM - 12:30 PM {'\n'}
+            {'\t  \t \t \t \t \t'}Available Days   :Monday - Friday {'\n'}
+        </Text>
+       </View>
+      <View style={styles.card}>
+       <Image source={GDoctorImage2} style={styles.image}/>
+      <Text  style={styles.txt1}>
+               
+                Dr.Vivek Sudakaran
+        </Text>
+        <Text style={styles.txt2}>
+            {'\n'}
+          {'\t \t \t \t \t \t'}Available timing :12:30 PM - 5:00 PM {'\n'}
+          {'\t \t \t \t \t \t'}Available Days   :Monday - Friday  {'\n'}
+        </Text>
 
-            <View style={{flexDirection:'row'}}>
-                <View style={{flex:0.5,padding:2}}>
-                    <TouchableOpacity style={{backgroundColor:'red',paddingVertical:110} } onPress={()=>navigation.navigate('Page3')}>
-                    <Text style={{textAlign:'center',color:'#fff',fontWeight:'bold'}}>DOCTORS  </Text>
-                    </TouchableOpacity>
-                </View>
-                <View style={{flex:0.5,padding:2}}>
-                    <TouchableOpacity style={{backgroundColor:'green',paddingVertical:110}}>
-                        <Text style={{textAlign:'center',color:'#fff',fontWeight:'bold'}}>LAB FACILITIES</Text>
-                    </TouchableOpacity>
-                </View>
-            </View>
-            <View style={{flexDirection:'row'}}>
-                <View style={{flex:0.5,padding:2}}>
-                    <TouchableOpacity style={{backgroundColor:'#fc0',paddingVertical:110}}>
-                    <Text style={{textAlign:'center',color:'#fff',fontWeight:'bold'}}>PALLIATIVE CARE</Text>
-                    </TouchableOpacity>
-                </View>
-                <View style={{flex:0.5,padding:2}}>
-                    <TouchableOpacity style={{backgroundColor:'orange',paddingVertical:100}}>
-                        <Text style={{textAlign:'center',color:'#fff',fontWeight:'bold'}}>VACCINATION FACILITY</Text>
-                    </TouchableOpacity>
-                </View>
-
-            </View>
-
-            
-
-          <TouchableOpacity style={styles.bluebn}>
-            <Text style ={styles.mainTxt}>
-                 DATE
-            </Text>
-          </TouchableOpacity>
- 
-          
+       </View>
       
+     </View>
 
-      </View>
-  )
-
+    )
 }
 const styles=StyleSheet.create({
     container:{
-         padding:40,  
-    },
-    new:{
-        height:40
+         padding:40
+             
     },
     bluebn:{
         padding:25,
@@ -71,10 +58,28 @@ const styles=StyleSheet.create({
         borderRadius:20,
         marginTop:50
 
-    },
-    mainTxt:{
-        textAlign:'center'
+    } ,txt1:{
+        textAlign:'center',fontSize:20,color:'black',fontWeight:'bold'
     }
+    ,txt2:{
+        fontSize:13,color:'black'
+    },
+    card:{
+    
+        margin:20,
+        borderRadius:15,
+        paddingVertical:10,
+        alignContent:'center',
+        backgroundColor:'#fff',
+        shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,  
+    elevation: 5
+
+    },
+    image:{width:200,height:200,alignSelf:'center',marginVertical:20}
+    
 
 })
 export default Page5;

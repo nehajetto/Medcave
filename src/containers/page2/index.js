@@ -13,24 +13,24 @@ const Page2=()=>
 
             <View style={{flexDirection:'row'}}>
                 <View style={{flex:0.5,padding:2}}>
-                    <TouchableOpacity style={{backgroundColor:'red',paddingVertical:110} } onPress={()=>navigation.navigate('Page3')}>
+                    <TouchableOpacity style={{backgroundColor:"#22C7B8",paddingVertical:110,borderRadius:5} } onPress={()=>navigation.navigate('Page3')}>
                     <Text style={{textAlign:'center',color:'#fff',fontWeight:'bold'}}>DOCTORS  </Text>
                     </TouchableOpacity>
                 </View>
                 <View style={{flex:0.5,padding:2}}>
-                    <TouchableOpacity style={{backgroundColor:'green',paddingVertical:110}}>
+                    <TouchableOpacity style={{backgroundColor:'#22C7B8',paddingVertical:110,borderRadius:5}} onPress={()=>navigation.navigate('Page12')}>
                         <Text style={{textAlign:'center',color:'#fff',fontWeight:'bold'}}>LAB FACILITIES</Text>
                     </TouchableOpacity>
                 </View>
             </View>
             <View style={{flexDirection:'row'}}>
                 <View style={{flex:0.5,padding:2}}>
-                    <TouchableOpacity style={{backgroundColor:'#fc0',paddingVertical:110}} onPress={()=>navigation.navigate('Page9')}>
+                    <TouchableOpacity style={{backgroundColor:'#22C7B8',paddingVertical:110,borderRadius:5}} onPress={()=>navigation.navigate('Page9')}>
                     <Text style={{textAlign:'center',color:'#fff',fontWeight:'bold'}}>PALLIATIVE CARE</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={{flex:0.5,padding:2}}>
-                    <TouchableOpacity style={{backgroundColor:'orange',paddingVertical:100}} onPress={()=>navigation.navigate('Page10')}>
+                    <TouchableOpacity style={{backgroundColor:'#22C7B8',paddingVertical:100,borderRadius:5}} onPress={()=>navigation.navigate('Page10')}>
                         <Text style={{textAlign:'center',color:'#fff',fontWeight:'bold'}}>VACCINATION FACILITY</Text>
                     </TouchableOpacity>
                 </View>
@@ -39,9 +39,9 @@ const Page2=()=>
 
             
 
-          <TouchableOpacity style={styles.bluebn}>
+          <TouchableOpacity style={styles.bluebn}  onPress={()=>navigation.navigate('Page14')}>
             <Text style ={styles.mainTxt}>
-                 DATE
+                 NOTICE BOARD
             </Text>
           </TouchableOpacity>
  

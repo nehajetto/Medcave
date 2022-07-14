@@ -11,7 +11,7 @@ const Page4=()=>
 
             <View style={{flexDirection:'row'}}>
                 <View style={{flex:0.5,padding:2}}>
-                    <TouchableOpacity style={{backgroundColor:'violet',height:120}}>
+                    <TouchableOpacity style={{backgroundColor:'',height:120}}>
                     <Text style={{textAlign:'center',color:'#fff',fontWeight:'bold'}}>DOCTORS  </Text>
                     </TouchableOpacity>
                 </View>

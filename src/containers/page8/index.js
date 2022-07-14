@@ -20,7 +20,7 @@ const Page8=()=>
         <Text style={styles.txt2}>
             {'\n'}
             {'\t  \t \t \t \t \t'}Available timing :9:00 AM - 12:30 PM {'\n'}
-            {'\t  \t \t \t \t \t'}Available Days   :Monday - Friday {'\n'}
+            {'\t  \t \t \t \t \t'}Available Days   :Monday - Wednesday {'\n'}
         </Text>
        </View>
       <View style={styles.card}>
@@ -32,7 +32,7 @@ const Page8=()=>
         <Text style={styles.txt2}>
             {'\n'}
           {'\t \t \t \t \t \t'}Available timing :12:30 PM - 5:00 PM {'\n'}
-          {'\t \t \t \t \t \t'}Available Days   :Monday - Friday  {'\n'}
+          {'\t \t \t \t \t \t'}Available Days   :Thursday - Sunday  {'\n'}
         </Text>
 
        </View>

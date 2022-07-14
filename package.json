@@ -23,7 +23,9 @@
     "react-native-linear-gradient": "^2.5.6",
     "react-native-safe-area-context": "3.2.0",
     "react-native-screens": "3.4.0",
-    "react-navigation": "^4.4.4"
+    "react-native-table-component": "^1.2.2",
+    "react-navigation": "^4.4.4",
+    "toggle-switch-react-native": "^3.3.0"
   },
   "devDependencies": {
     "@babel/core": "7.18.2",
